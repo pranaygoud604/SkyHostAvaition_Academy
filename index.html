@@ -1,0 +1,1084 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>SkyHost Aviation Academy — India's Premier Flight & Cabin Crew Institute</title>
+<meta name="description" content="SkyHost Aviation Academy. DGCA-aligned pilot, cabin crew, ground staff and aviation management programs. Cinematic training. Global placements." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --navy:#071A2E;
+  --navy-2:#0B2540;
+  --navy-3:#102E54;
+  --gold:#D4AF37;
+  --gold-2:#E8C766;
+  --sky:#0EA5E9;
+  --ink:#F4F1EA;
+  --ink-dim:rgba(244,241,234,.62);
+  --ink-faint:rgba(244,241,234,.32);
+  --hair:rgba(212,175,55,.22);
+  --hair-soft:rgba(244,241,234,.10);
+  --serif:"Instrument Serif", "Times New Roman", serif;
+  --sans:"Geist", "Helvetica Neue", Arial, sans-serif;
+  --mono:"Geist Mono", ui-monospace, monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--navy);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+html{scroll-behavior:auto}
+body{overflow-x:hidden;font-weight:400;letter-spacing:.005em}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+::selection{background:var(--gold);color:var(--navy)}
+
+/* ============== TYPE SYSTEM ============== */
+.serif{font-family:var(--serif);font-weight:400;letter-spacing:-.01em}
+.mono{font-family:var(--mono);font-weight:400}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:24px;height:1px;background:var(--gold);display:inline-block}
+.h-display{font-family:var(--serif);font-weight:400;line-height:.92;letter-spacing:-.02em;font-size:clamp(56px,9.2vw,168px)}
+.h-display .it{font-style:italic;color:var(--gold)}
+.h-section{font-family:var(--serif);font-weight:400;line-height:.95;letter-spacing:-.015em;font-size:clamp(40px,5.6vw,96px)}
+.h-section .it{font-style:italic;color:var(--gold)}
+.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-dim)}
+.body-lg{font-size:18px;line-height:1.55;color:var(--ink-dim);max-width:54ch;font-weight:300}
+.body{font-size:15px;line-height:1.6;color:var(--ink-dim);font-weight:300}
+.num{font-family:var(--serif);font-style:italic;color:var(--gold);font-weight:400}
+
+/* ============== LAYOUT ============== */
+.wrap{max-width:1480px;margin:0 auto;padding:0 48px;position:relative}
+@media (max-width:760px){ .wrap{padding:0 24px} }
+section{position:relative}
+
+/* ============== NAV ============== */
+.nav{position:fixed;top:0;left:0;right:0;z-index:60;padding:22px 48px;display:flex;align-items:center;justify-content:space-between;mix-blend-mode:difference}
+.nav .brand{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-size:22px;letter-spacing:.02em}
+.nav .brand .mk{width:28px;height:28px;border:1px solid var(--ink);border-radius:50%;display:grid;place-items:center;position:relative}
+.nav .brand .mk::before,.nav .brand .mk::after{content:"";position:absolute;background:var(--ink)}
+.nav .brand .mk::before{width:14px;height:1px}
+.nav .brand .mk::after{height:14px;width:1px}
+.nav .links{display:flex;align-items:center;gap:36px;font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase}
+.nav .links a{opacity:.85;transition:opacity .25s}
+.nav .links a:hover{opacity:1}
+.nav .cta{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;padding:12px 18px;border:1px solid var(--ink);border-radius:999px}
+@media (max-width:920px){ .nav{padding:18px 24px} .nav .links{display:none} }
+
+/* ============== HERO ============== */
+.hero{height:100vh;position:relative;overflow:hidden}
+#sky-canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero .vignette{position:absolute;inset:0;background:
+  radial-gradient(120% 80% at 50% 100%, rgba(7,26,46,.85) 0%, rgba(7,26,46,0) 55%),
+  linear-gradient(180deg, rgba(7,26,46,.35) 0%, rgba(7,26,46,0) 30%, rgba(7,26,46,0) 70%, rgba(7,26,46,.85) 100%);
+  pointer-events:none}
+.hero .grain{position:absolute;inset:0;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.08 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");opacity:.5;pointer-events:none;mix-blend-mode:overlay}
+.hero .copy{position:absolute;left:0;right:0;bottom:6vh;padding:0 48px;z-index:5;display:flex;align-items:flex-end;justify-content:space-between;gap:48px}
+.hero .copy h1{max-width:14ch}
+.hero .copy .meta{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-dim);text-align:right;line-height:1.8}
+.hero .copy .meta .v{color:var(--ink)}
+.hero .hud{position:absolute;top:18vh;left:48px;font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-dim);line-height:2}
+.hero .hud span{color:var(--gold)}
+.hero .scroll-hint{position:absolute;left:50%;bottom:24px;transform:translateX(-50%);font-family:var(--mono);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-dim);display:flex;flex-direction:column;align-items:center;gap:10px}
+.hero .scroll-hint .line{width:1px;height:42px;background:linear-gradient(to bottom, var(--ink-dim), transparent);animation:drip 2.2s ease-in-out infinite}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+@media (max-width:760px){
+  .hero .copy{padding:0 24px;flex-direction:column;align-items:flex-start;gap:18px}
+  .hero .copy .meta{text-align:left}
+  .hero .hud{left:24px;top:14vh}
+}
+
+/* ============== MARQUEE ============== */
+.marquee{border-top:1px solid var(--hair-soft);border-bottom:1px solid var(--hair-soft);overflow:hidden;background:#050F1C}
+.marquee .track{display:flex;gap:64px;padding:22px 0;white-space:nowrap;animation:slide 38s linear infinite;font-family:var(--serif);font-size:30px}
+.marquee .track span{display:inline-flex;align-items:center;gap:64px;color:var(--ink-dim)}
+.marquee .track .dot{width:6px;height:6px;background:var(--gold);border-radius:50%;display:inline-block}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* ============== MANIFESTO ============== */
+.manifesto{padding:160px 0 120px;position:relative}
+.manifesto .grid{display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:end}
+.manifesto p.lead{font-family:var(--serif);font-size:clamp(28px,3.2vw,46px);line-height:1.18;letter-spacing:-.01em;color:var(--ink);max-width:22ch}
+.manifesto p.lead .it{font-style:italic;color:var(--gold)}
+.manifesto .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:48px 32px}
+.manifesto .stat .v{font-family:var(--serif);font-size:80px;line-height:1;letter-spacing:-.02em}
+.manifesto .stat .v.gold{color:var(--gold);font-style:italic}
+.manifesto .stat .l{margin-top:10px;font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-dim)}
+@media (max-width:920px){ .manifesto .grid{grid-template-columns:1fr;gap:48px} }
+
+/* ============== PROGRAMS ============== */
+.programs{padding:120px 0;border-top:1px solid var(--hair-soft)}
+.programs .head{display:flex;align-items:flex-end;justify-content:space-between;gap:48px;margin-bottom:64px}
+.programs .head .right{max-width:42ch}
+.prog-list{border-top:1px solid var(--hair)}
+.prog-row{display:grid;grid-template-columns:80px 1.1fr 1fr 0.7fr 60px;gap:32px;align-items:center;padding:36px 0;border-bottom:1px solid var(--hair);position:relative;cursor:pointer;transition:padding .4s ease}
+.prog-row:hover{padding-left:24px}
+.prog-row::before{content:"";position:absolute;left:0;top:0;bottom:0;width:0;background:linear-gradient(90deg, rgba(212,175,55,.06), transparent);transition:width .5s ease;z-index:-1}
+.prog-row:hover::before{width:100%}
+.prog-row .num{font-family:var(--mono);font-size:12px;letter-spacing:.18em;color:var(--ink-faint);font-style:normal}
+.prog-row .title{font-family:var(--serif);font-size:42px;line-height:1;letter-spacing:-.015em}
+.prog-row .title .it{font-style:italic;color:var(--gold);display:block;font-size:18px;margin-top:6px;letter-spacing:.01em}
+.prog-row .desc{font-size:14px;color:var(--ink-dim);line-height:1.55;font-weight:300}
+.prog-row .meta{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-dim);line-height:1.9}
+.prog-row .meta b{color:var(--ink);font-weight:500}
+.prog-row .arrow{justify-self:end;width:44px;height:44px;border:1px solid var(--hair);border-radius:50%;display:grid;place-items:center;transition:all .4s ease}
+.prog-row:hover .arrow{background:var(--gold);border-color:var(--gold);transform:rotate(-45deg)}
+.prog-row .arrow svg{width:14px;height:14px;stroke:var(--ink);transition:stroke .4s}
+.prog-row:hover .arrow svg{stroke:var(--navy)}
+@media (max-width:920px){
+  .prog-row{grid-template-columns:1fr;gap:12px;padding:28px 0}
+  .prog-row .arrow{display:none}
+  .prog-row .title{font-size:32px}
+  .prog-row .num{display:block}
+}
+
+/* ============== PLACEMENTS ============== */
+.placements{padding:140px 0;background:linear-gradient(180deg, var(--navy) 0%, #04101D 100%);border-top:1px solid var(--hair-soft);overflow:hidden}
+.placements .head{display:flex;justify-content:space-between;align-items:flex-end;gap:48px;margin-bottom:64px}
+.placements .head .left{max-width:18ch}
+.place-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center}
+.globe-wrap{aspect-ratio:1/1;position:relative}
+#globe-canvas{position:absolute;inset:0;width:100%;height:100%}
+.globe-wrap .ring{position:absolute;inset:0;border:1px solid var(--hair);border-radius:50%;pointer-events:none}
+.globe-wrap .ring.r2{inset:-30px;border-color:var(--hair-soft)}
+.globe-wrap .ring.r3{inset:-60px;border-color:var(--hair-soft);opacity:.5}
+.globe-wrap .label{position:absolute;font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);background:rgba(7,26,46,.7);padding:4px 8px;border:1px solid var(--hair);backdrop-filter:blur(6px);transform:translate(-50%,-50%)}
+.recruiters{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hair-soft);border:1px solid var(--hair-soft);margin-top:64px}
+.recruiters .r{background:var(--navy);padding:28px 20px;font-family:var(--serif);font-size:22px;display:flex;align-items:center;justify-content:center;color:var(--ink-dim);transition:color .3s, background .3s;text-align:center}
+.recruiters .r:hover{color:var(--gold);background:#050F1C}
+@media (max-width:920px){
+  .place-grid{grid-template-columns:1fr}
+  .recruiters{grid-template-columns:repeat(2,1fr)}
+}
+
+/* ============== JOURNEY (scroll storytelling) ============== */
+.journey{padding:120px 0;border-top:1px solid var(--hair-soft);position:relative}
+.journey .head{margin-bottom:80px}
+.journey-track{position:relative;padding-left:80px}
+.journey-track::before{content:"";position:absolute;left:30px;top:0;bottom:0;width:1px;background:var(--hair)}
+.journey-track::after{content:"";position:absolute;left:30px;top:0;height:var(--prog,0%);width:1px;background:linear-gradient(to bottom, var(--gold), var(--sky));transition:height .15s linear}
+.j-step{position:relative;padding:32px 0 64px;display:grid;grid-template-columns:1fr 1.5fr;gap:48px;align-items:start}
+.j-step .dot{position:absolute;left:-58px;top:38px;width:14px;height:14px;border-radius:50%;background:var(--navy);border:1px solid var(--hair);transition:all .4s}
+.j-step.on .dot{background:var(--gold);border-color:var(--gold);box-shadow:0 0 0 6px rgba(212,175,55,.12)}
+.j-step .stage{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-faint)}
+.j-step.on .stage{color:var(--gold)}
+.j-step h3{font-family:var(--serif);font-size:48px;line-height:.95;letter-spacing:-.015em;margin-top:10px}
+.j-step h3 .it{font-style:italic;color:var(--gold)}
+.j-step p{font-size:15px;line-height:1.65;color:var(--ink-dim);max-width:48ch;font-weight:300}
+.j-step .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.j-step .tag{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;padding:6px 10px;border:1px solid var(--hair);color:var(--ink-dim);border-radius:999px}
+@media (max-width:920px){
+  .journey-track{padding-left:48px}
+  .journey-track::before, .journey-track::after{left:14px}
+  .j-step{grid-template-columns:1fr;gap:16px;padding:24px 0 48px}
+  .j-step .dot{left:-42px}
+  .j-step h3{font-size:32px}
+}
+
+/* ============== TESTIMONIAL ============== */
+.testimonial{padding:160px 0;border-top:1px solid var(--hair-soft);text-align:center;position:relative;overflow:hidden}
+.testimonial .quote-mark{font-family:var(--serif);font-style:italic;font-size:320px;line-height:.6;color:var(--gold);opacity:.08;position:absolute;top:80px;left:50%;transform:translateX(-50%)}
+.testimonial blockquote{font-family:var(--serif);font-size:clamp(28px,3.6vw,52px);line-height:1.15;letter-spacing:-.01em;max-width:24ch;margin:0 auto;position:relative;z-index:2}
+.testimonial blockquote .it{font-style:italic;color:var(--gold)}
+.testimonial .who{margin-top:48px;display:flex;align-items:center;justify-content:center;gap:18px;font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-dim)}
+.testimonial .who .av{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg, var(--navy-3), var(--gold));border:1px solid var(--hair)}
+.testimonial .who b{color:var(--ink);font-weight:500}
+
+/* ============== ADMISSIONS ============== */
+.admissions{padding:140px 0;border-top:1px solid var(--hair-soft);background:#050F1C;position:relative}
+.adm-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:96px;align-items:start}
+.adm-grid .left h2{margin-top:18px}
+.adm-grid .left .body-lg{margin-top:28px}
+.adm-grid .left .checklist{margin-top:48px;display:grid;gap:14px}
+.adm-grid .left .check{display:flex;gap:14px;align-items:flex-start;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-dim)}
+.adm-grid .left .check::before{content:"";width:14px;height:14px;border:1px solid var(--gold);transform:rotate(45deg);margin-top:4px;flex:0 0 14px;position:relative}
+.form{border:1px solid var(--hair);background:rgba(7,26,46,.6);backdrop-filter:blur(10px);padding:48px;position:relative}
+.form::before{content:"";position:absolute;top:-1px;left:-1px;right:-1px;height:1px;background:linear-gradient(90deg, transparent, var(--gold), transparent)}
+.form .head{display:flex;justify-content:space-between;align-items:center;margin-bottom:36px;padding-bottom:24px;border-bottom:1px solid var(--hair-soft)}
+.form .head .t{font-family:var(--serif);font-size:28px}
+.form .head .id{font-family:var(--mono);font-size:11px;letter-spacing:.22em;color:var(--ink-faint);text-transform:uppercase}
+.form .field{display:grid;gap:8px;margin-bottom:22px}
+.form label{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-dim)}
+.form input, .form select, .form textarea{font:inherit;background:transparent;border:0;border-bottom:1px solid var(--hair-soft);padding:12px 0;color:var(--ink);font-size:18px;font-family:var(--serif);outline:none;transition:border-color .3s}
+.form input:focus, .form select:focus, .form textarea:focus{border-color:var(--gold)}
+.form select{appearance:none;background-image:linear-gradient(45deg, transparent 50%, var(--gold) 50%),linear-gradient(135deg, var(--gold) 50%, transparent 50%);background-position:calc(100% - 14px) 18px, calc(100% - 8px) 18px;background-size:6px 6px;background-repeat:no-repeat}
+.form .row{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.form .submit{margin-top:24px;display:flex;justify-content:space-between;align-items:center;gap:24px}
+.form .submit small{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint);max-width:30ch;line-height:1.6}
+.btn-magnet{position:relative;display:inline-flex;align-items:center;gap:14px;background:var(--gold);color:var(--navy);font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;padding:18px 28px;border-radius:999px;font-weight:600;overflow:hidden;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.btn-magnet::after{content:"";width:18px;height:1px;background:var(--navy);position:relative;transition:width .3s}
+.btn-magnet:hover{transform:translateY(-2px)}
+.btn-magnet:hover::after{width:28px}
+@media (max-width:920px){ .adm-grid{grid-template-columns:1fr;gap:48px} .form{padding:28px} .form .row{grid-template-columns:1fr} }
+
+/* ============== FAQ ============== */
+.faq{padding:120px 0;border-top:1px solid var(--hair-soft)}
+.faq .head{margin-bottom:64px}
+.faq-list{border-top:1px solid var(--hair-soft)}
+.faq-item{border-bottom:1px solid var(--hair-soft);padding:28px 0;cursor:pointer}
+.faq-item .q{display:flex;justify-content:space-between;align-items:center;gap:32px;font-family:var(--serif);font-size:28px;letter-spacing:-.01em}
+.faq-item .q .ic{width:32px;height:32px;border:1px solid var(--hair);border-radius:50%;display:grid;place-items:center;flex:0 0 32px;transition:all .3s}
+.faq-item .q .ic::before, .faq-item .q .ic::after{content:"";position:absolute;width:10px;height:1px;background:var(--ink);transition:transform .3s}
+.faq-item .q .ic{position:relative}
+.faq-item .q .ic::after{transform:rotate(90deg)}
+.faq-item.open .q .ic{background:var(--gold);border-color:var(--gold)}
+.faq-item.open .q .ic::before, .faq-item.open .q .ic::after{background:var(--navy)}
+.faq-item.open .q .ic::after{transform:rotate(0)}
+.faq-item .a{max-height:0;overflow:hidden;transition:max-height .5s cubic-bezier(.2,.7,.2,1), padding .3s;color:var(--ink-dim);font-size:15px;line-height:1.6;max-width:64ch;font-weight:300}
+.faq-item.open .a{max-height:280px;padding-top:18px}
+
+/* ============== FOOTER ============== */
+.footer{padding:120px 0 32px;background:#030B16;border-top:1px solid var(--hair)}
+.foot-cta{font-family:var(--serif);font-size:clamp(56px,9vw,160px);line-height:.92;letter-spacing:-.02em;margin-bottom:96px}
+.foot-cta .it{font-style:italic;color:var(--gold)}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid var(--hair-soft)}
+.foot-grid h4{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:24px}
+.foot-grid ul{list-style:none;display:grid;gap:12px}
+.foot-grid ul a{color:var(--ink-dim);font-size:14px;transition:color .25s}
+.foot-grid ul a:hover{color:var(--ink)}
+.foot-grid .addr{color:var(--ink-dim);font-size:14px;line-height:1.7;max-width:32ch}
+.foot-bottom{padding-top:32px;display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-faint)}
+@media (max-width:920px){ .foot-grid{grid-template-columns:1fr 1fr;gap:32px} }
+
+/* ============== UTIL ============== */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.2,.7,.2,1), transform 1s cubic-bezier(.2,.7,.2,1)}
+.reveal.show{opacity:1;transform:none}
+.split-line{overflow:hidden;display:block}
+.split-line > span{display:inline-block;transform:translateY(110%);transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
+.split-line.show > span{transform:none}
+
+.toast{position:fixed;bottom:28px;left:50%;transform:translate(-50%,80px);background:var(--gold);color:var(--navy);font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;padding:16px 24px;border-radius:999px;transition:transform .5s cubic-bezier(.2,.7,.2,1);z-index:100;font-weight:600}
+.toast.show{transform:translate(-50%,0)}
+
+</style>
+</head>
+<body>
+
+<!-- =================== NAV =================== -->
+<nav class="nav">
+  <a href="#" class="brand"><span class="mk"></span> SkyHost</a>
+  <div class="links">
+    <a href="#programs">Programs</a>
+    <a href="#placements">Placements</a>
+    <a href="#journey">Journey</a>
+    <a href="#admissions">Admissions</a>
+    <a href="#faq">FAQ</a>
+  </div>
+  <a href="#admissions" class="cta">Apply · 2026</a>
+</nav>
+
+<!-- =================== HERO =================== -->
+<section class="hero" data-screen-label="01 Hero">
+  <canvas id="sky-canvas"></canvas>
+  <div class="vignette"></div>
+  <div class="grain"></div>
+
+  <div class="hud">
+    <div>FLIGHT <span>SH—026</span></div>
+    <div>RWY <span>09L</span> · BLR</div>
+    <div>WIND <span>240° / 06KT</span></div>
+    <div>VIS <span>10KM</span></div>
+    <div>STATUS <span id="hud-status">READY FOR DEPARTURE</span></div>
+  </div>
+
+  <div class="copy">
+    <h1 class="h-display">
+      <span class="split-line"><span>The sky is</span></span>
+      <span class="split-line"><span>not the limit.</span></span>
+      <span class="split-line"><span>It's <span class="it">the start.</span></span></span>
+    </h1>
+    <div class="meta">
+      <div class="v">SKYHOST AVIATION ACADEMY</div>
+      <div>EST. MMXIV · BENGALURU</div>
+      <div>DGCA · IATA · BCAS ALIGNED</div>
+      <div>INTAKE: JAN · JUL · OCT 2026</div>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <span>Scroll to take off</span>
+    <span class="line"></span>
+  </div>
+</section>
+
+<!-- =================== MARQUEE =================== -->
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Commercial Pilot License<span class="dot"></span>Cabin Crew Excellence<span class="dot"></span>Aviation Management<span class="dot"></span>Ground Operations<span class="dot"></span>Airport Handling<span class="dot"></span>Hospitality on Air<span class="dot"></span></span>
+    <span>Commercial Pilot License<span class="dot"></span>Cabin Crew Excellence<span class="dot"></span>Aviation Management<span class="dot"></span>Ground Operations<span class="dot"></span>Airport Handling<span class="dot"></span>Hospitality on Air<span class="dot"></span></span>
+  </div>
+</div>
+
+<!-- =================== MANIFESTO =================== -->
+<section class="manifesto wrap" data-screen-label="02 Manifesto">
+  <div class="grid">
+    <div>
+      <div class="eyebrow reveal">Chapter 01 · Manifesto</div>
+      <p class="lead reveal" style="margin-top:32px">
+        We don't train aviators. We <span class="it">forge</span> them. Through ten thousand hours of simulator, classroom and cabin — under instructors who flew the routes you'll one day call home.
+      </p>
+    </div>
+    <div class="stats">
+      <div class="stat reveal"><div class="v gold">3,400+</div><div class="l">Cadets placed since 2014</div></div>
+      <div class="stat reveal"><div class="v">96<span style="color:var(--gold);font-style:italic">%</span></div><div class="l">First-attempt placement rate</div></div>
+      <div class="stat reveal"><div class="v gold">42</div><div class="l">Airline partners worldwide</div></div>
+      <div class="stat reveal"><div class="v">11</div><div class="l">Years of unbroken excellence</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== PROGRAMS =================== -->
+<section class="programs wrap" id="programs" data-screen-label="03 Programs">
+  <div class="head">
+    <div>
+      <div class="eyebrow reveal">Chapter 02 · Programs</div>
+      <h2 class="h-section reveal" style="margin-top:24px">Six runways. <span class="it">One sky.</span></h2>
+    </div>
+    <p class="body-lg reveal right">Each program is engineered as a vertical of its own — taught by line captains, purser-instructors and former DGCA examiners. Choose your runway.</p>
+  </div>
+
+  <div class="prog-list">
+    <a class="prog-row" href="#admissions">
+      <div class="num">/ 01</div>
+      <div class="title">Commercial Pilot License<span class="it">CPL · 18 months</span></div>
+      <div class="desc">DGCA-aligned 200-hour flight program with multi-engine, IR and night rating. Boeing 737 NG full-flight simulator integration in month 12.</div>
+      <div class="meta">Intake <b>24 cadets</b><br>Investment <b>₹ 38.5 L</b></div>
+      <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+    </a>
+    <a class="prog-row" href="#admissions">
+      <div class="num">/ 02</div>
+      <div class="title">Cabin Crew Excellence<span class="it">CCE · 9 months</span></div>
+      <div class="desc">IATA-certified cabin crew curriculum with on-board service, emergency procedures, grooming and global hospitality protocols.</div>
+      <div class="meta">Intake <b>48 cadets</b><br>Investment <b>₹ 3.8 L</b></div>
+      <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+    </a>
+    <a class="prog-row" href="#admissions">
+      <div class="num">/ 03</div>
+      <div class="title">Aviation Management<span class="it">BBA · 36 months</span></div>
+      <div class="desc">A triple-major bachelor's combining airline operations, airport business strategy and aviation finance. UGC-recognized degree.</div>
+      <div class="meta">Intake <b>60 cadets</b><br>Investment <b>₹ 6.4 L</b></div>
+      <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+    </a>
+    <a class="prog-row" href="#admissions">
+      <div class="num">/ 04</div>
+      <div class="title">Ground &amp; Ramp Operations<span class="it">GRO · 6 months</span></div>
+      <div class="desc">Live-airport apprenticeship across passenger handling, baggage, ramp coordination and load control. BCAS-cleared training.</div>
+      <div class="meta">Intake <b>36 cadets</b><br>Investment <b>₹ 1.9 L</b></div>
+      <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+    </a>
+    <a class="prog-row" href="#admissions">
+      <div class="num">/ 05</div>
+      <div class="title">Airport Customer Service<span class="it">ACS · 5 months</span></div>
+      <div class="desc">Front-of-house specialization for premium airline counters, lounge operations and VIP handling. English fluency intensive.</div>
+      <div class="meta">Intake <b>40 cadets</b><br>Investment <b>₹ 1.4 L</b></div>
+      <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+    </a>
+    <a class="prog-row" href="#admissions">
+      <div class="num">/ 06</div>
+      <div class="title">Private Pilot License<span class="it">PPL · 8 months</span></div>
+      <div class="desc">For owner-operators and weekend aviators. 60 flight hours on Cessna 172, including cross-country and night solo qualifications.</div>
+      <div class="meta">Intake <b>16 cadets</b><br>Investment <b>₹ 14.2 L</b></div>
+      <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+    </a>
+  </div>
+</section>
+
+<!-- =================== PLACEMENTS =================== -->
+<section class="placements" id="placements" data-screen-label="04 Placements">
+  <div class="wrap">
+    <div class="head">
+      <div class="left">
+        <div class="eyebrow reveal">Chapter 03 · Placements</div>
+        <h2 class="h-section reveal" style="margin-top:24px">Our cadets fly <span class="it">everywhere.</span></h2>
+      </div>
+      <p class="body-lg reveal">From Bengaluru to Doha to Reykjavík — 3,400 SkyHost graduates currently hold active line positions across 42 carriers and 28 countries.</p>
+    </div>
+
+    <div class="place-grid">
+      <div class="globe-wrap">
+        <div class="ring r3"></div>
+        <div class="ring r2"></div>
+        <div class="ring"></div>
+        <canvas id="globe-canvas"></canvas>
+      </div>
+      <div>
+        <div class="kicker reveal">Active placement cities</div>
+        <h3 class="h-section reveal" style="font-size:clamp(36px,4vw,64px);margin-top:16px">28 cities. <span class="it">Six continents.</span> One academy.</h3>
+        <p class="body-lg reveal" style="margin-top:24px">Our placement cell operates as a private aviation desk — direct lines into hiring directors at IndiGo, Air India, Emirates, Qatar, Singapore Airlines, Etihad, ANA, Lufthansa, British Airways and Cathay. Cadets are interviewed before they graduate.</p>
+
+        <div style="margin-top:36px;display:grid;grid-template-columns:1fr 1fr;gap:24px">
+          <div><div class="num" style="font-size:48px;line-height:1">₹ 9.4 L</div><div class="kicker" style="margin-top:8px">Avg. first-year CTC</div></div>
+          <div><div class="num" style="font-size:48px;line-height:1">42</div><div class="kicker" style="margin-top:8px">Hiring airline partners</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="recruiters">
+      <div class="r">IndiGo</div>
+      <div class="r">Air India</div>
+      <div class="r">Emirates</div>
+      <div class="r">Qatar Airways</div>
+      <div class="r">Singapore Airlines</div>
+      <div class="r">Etihad</div>
+      <div class="r">Vistara</div>
+      <div class="r">Akasa</div>
+      <div class="r">Lufthansa</div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== JOURNEY =================== -->
+<section class="journey wrap" id="journey" data-screen-label="05 Journey">
+  <div class="head">
+    <div class="eyebrow reveal">Chapter 04 · The Journey</div>
+    <h2 class="h-section reveal" style="margin-top:24px;max-width:18ch">From application to <span class="it">first flight.</span></h2>
+  </div>
+
+  <div class="journey-track" id="j-track">
+    <div class="j-step">
+      <div class="dot"></div>
+      <div>
+        <div class="stage">Stage 01 · Day 0</div>
+        <h3>The <span class="it">application.</span></h3>
+      </div>
+      <div>
+        <p>A single form, reviewed by our admissions chief within 12 hours. We look for poise, fluency, physical fitness markers and — most importantly — intent.</p>
+        <div class="tags"><span class="tag">Online form</span><span class="tag">12hr review</span><span class="tag">Founder-led</span></div>
+      </div>
+    </div>
+    <div class="j-step">
+      <div class="dot"></div>
+      <div>
+        <div class="stage">Stage 02 · Day 3</div>
+        <h3>Counsellor <span class="it">call.</span></h3>
+      </div>
+      <div>
+        <p>Forty-five minutes with a former line captain or purser. No sales pitch — a conversation to find the runway that fits your trajectory.</p>
+        <div class="tags"><span class="tag">45-min call</span><span class="tag">Career mapping</span><span class="tag">Program fit</span></div>
+      </div>
+    </div>
+    <div class="j-step">
+      <div class="dot"></div>
+      <div>
+        <div class="stage">Stage 03 · Day 7</div>
+        <h3>Aptitude &amp; <span class="it">medical.</span></h3>
+      </div>
+      <div>
+        <p>Cognitive aptitude, spatial reasoning, language and a Class-2 medical at our partner facility. Conducted on a single day to respect your time.</p>
+        <div class="tags"><span class="tag">DGCA-style test</span><span class="tag">Class-2 medical</span><span class="tag">One day</span></div>
+      </div>
+    </div>
+    <div class="j-step">
+      <div class="dot"></div>
+      <div>
+        <div class="stage">Stage 04 · Day 14</div>
+        <h3>Offer &amp; <span class="it">enrolment.</span></h3>
+      </div>
+      <div>
+        <p>A formal offer letter, scholarship review, and a personal tour of the campus and 737 NG simulator bay with the program director.</p>
+        <div class="tags"><span class="tag">Scholarships</span><span class="tag">Sim walkthrough</span><span class="tag">Founder dinner</span></div>
+      </div>
+    </div>
+    <div class="j-step">
+      <div class="dot"></div>
+      <div>
+        <div class="stage">Stage 05 · Day 30</div>
+        <h3>First <span class="it">flight.</span></h3>
+      </div>
+      <div>
+        <p>Within thirty days of enrolment, every CPL cadet logs their first hour. For cabin crew, day-one means uniform and live-cabin mockup training.</p>
+        <div class="tags"><span class="tag">Hour zero</span><span class="tag">Live cabin</span><span class="tag">Mentor pairing</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== TESTIMONIAL =================== -->
+<section class="testimonial wrap" data-screen-label="06 Voice">
+  <div class="quote-mark">"</div>
+  <div class="eyebrow reveal" style="position:relative;z-index:2">Chapter 05 · A cadet's voice</div>
+  <blockquote class="reveal" style="margin-top:32px">
+    I walked into SkyHost as a small-town girl with a Class-12 transcript and a single ambition. <span class="it">Eighteen months later I was on a Doha-bound 777, in uniform, addressing a hundred and forty passengers by name.</span>
+  </blockquote>
+  <div class="who reveal">
+    <div class="av"></div>
+    <div><b>Ananya Iyer</b> · Class of 2024 · Cabin Crew, Qatar Airways</div>
+  </div>
+</section>
+
+<!-- =================== ADMISSIONS =================== -->
+<section class="admissions" id="admissions" data-screen-label="07 Admissions">
+  <div class="wrap adm-grid">
+    <div class="left">
+      <div class="eyebrow reveal">Chapter 06 · Begin</div>
+      <h2 class="h-section reveal">Reserve your <span class="it">seat.</span></h2>
+      <p class="body-lg reveal">Each intake is small by design. Submit your details and our admissions chief will reach out within twelve hours — by phone, by WhatsApp, or by personal visit.</p>
+      <div class="checklist">
+        <div class="check reveal">Direct call from our admissions chief within 12 hours</div>
+        <div class="check reveal">Personalised program-fit assessment</div>
+        <div class="check reveal">Scholarship eligibility review</div>
+        <div class="check reveal">Campus visit and 737 simulator demo on request</div>
+      </div>
+    </div>
+
+    <form class="form reveal" id="adm-form" onsubmit="return submitForm(event)">
+      <div class="head">
+        <div class="t">Admissions Form</div>
+        <div class="id">SH/ADM/2026/<span id="form-id">0000</span></div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="fn">Full Name</label>
+          <input id="fn" type="text" required placeholder="As on government ID" />
+        </div>
+        <div class="field">
+          <label for="ph">Phone</label>
+          <input id="ph" type="tel" required pattern="[0-9+ ]{7,}" placeholder="+91 ▢▢▢▢▢ ▢▢▢▢▢" />
+        </div>
+      </div>
+      <div class="field">
+        <label for="em">Email</label>
+        <input id="em" type="email" required placeholder="you@example.com" />
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="pg">Program of Interest</label>
+          <select id="pg" required>
+            <option value="">Select runway</option>
+            <option>Commercial Pilot License · CPL</option>
+            <option>Cabin Crew Excellence · CCE</option>
+            <option>Aviation Management · BBA</option>
+            <option>Ground &amp; Ramp Operations</option>
+            <option>Airport Customer Service</option>
+            <option>Private Pilot License · PPL</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="it">Preferred Intake</label>
+          <select id="it">
+            <option>January 2026</option>
+            <option>July 2026</option>
+            <option>October 2026</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label for="ms">Message · optional</label>
+        <textarea id="ms" rows="2" placeholder="Anything we should know about your journey so far"></textarea>
+      </div>
+      <div class="submit">
+        <small>By submitting, you consent to be contacted by SkyHost admissions. We never share details with third parties.</small>
+        <button type="submit" class="btn-magnet">Submit Application</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- =================== FAQ =================== -->
+<section class="faq wrap" id="faq" data-screen-label="08 FAQ">
+  <div class="head">
+    <div class="eyebrow reveal">Chapter 07 · Questions answered</div>
+    <h2 class="h-section reveal" style="margin-top:24px;max-width:16ch">Before you <span class="it">apply.</span></h2>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item"><div class="q">What is the minimum eligibility for the CPL program? <span class="ic"></span></div><div class="a">Class 12 with Physics &amp; Mathematics (minimum 50% aggregate), age 17–32, and a DGCA Class-2 medical clearance. We facilitate the medical for shortlisted candidates at our partner facility.</div></div>
+    <div class="faq-item"><div class="q">Are scholarships available? <span class="ic"></span></div><div class="a">Yes — merit, sport, and need-based scholarships covering up to 35% of program fees. Reviewed individually by the founder's office within seven days of enrolment.</div></div>
+    <div class="faq-item"><div class="q">Do you provide placement guarantees? <span class="ic"></span></div><div class="a">We guarantee minimum-three airline interviews for every cadet who clears the program with first-attempt module passes. Our historical first-attempt placement rate is 96%.</div></div>
+    <div class="faq-item"><div class="q">Where is the campus located? <span class="ic"></span></div><div class="a">Our main campus is in HAL II Stage, Bengaluru, with the flight academy operating out of Jakkur Aerodrome and our 737 NG simulator bay at the Devanahalli training centre.</div></div>
+    <div class="faq-item"><div class="q">Can I tour the campus before applying? <span class="ic"></span></div><div class="a">Always. Submit the form above with your preferred date and our admissions chief will host you personally — including a guided walkthrough of the simulator bay and a sit-down with the program director.</div></div>
+  </div>
+</section>
+
+<!-- =================== FOOTER =================== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-cta reveal">
+      Your runway <span class="it">is waiting.</span>
+    </div>
+    <div class="foot-grid">
+      <div>
+        <div class="brand" style="display:flex;align-items:center;gap:12px;font-family:var(--serif);font-size:28px;margin-bottom:24px"><span style="width:28px;height:28px;border:1px solid var(--ink);border-radius:50%;display:inline-block;position:relative"></span> SkyHost</div>
+        <div class="addr">SkyHost Aviation Academy<br>HAL II Stage, Old Airport Road<br>Bengaluru 560008, India<br><br>admissions@skyhost.aero<br>+91 80 4000 1900</div>
+      </div>
+      <div>
+        <h4>Programs</h4>
+        <ul>
+          <li><a href="#programs">Commercial Pilot</a></li>
+          <li><a href="#programs">Cabin Crew</a></li>
+          <li><a href="#programs">Aviation Management</a></li>
+          <li><a href="#programs">Ground Operations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Academy</h4>
+        <ul>
+          <li><a href="#placements">Placements</a></li>
+          <li><a href="#journey">Admissions</a></li>
+          <li><a href="#">Faculty</a></li>
+          <li><a href="#">Campus</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="#">WhatsApp</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© MMXXVI · SkyHost Aviation Pvt Ltd · CIN U80300KA2014PTC074421</div>
+      <div>DGCA Approved · BCAS Cleared · IATA Authorized</div>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast">Application received · Our chief will reach you in 12 hours</div>
+
+<!-- =================== LIBS =================== -->
+<script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+<script src="https://unpkg.com/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+/* ============== HERO 3D SCENE ============== */
+(function heroScene(){
+  const canvas = document.getElementById('sky-canvas');
+  const renderer = new THREE.WebGLRenderer({canvas, antialias:true, alpha:true});
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  const w = ()=>canvas.clientWidth, h = ()=>canvas.clientHeight;
+  renderer.setSize(w(), h(), false);
+
+  const scene = new THREE.Scene();
+  scene.fog = new THREE.FogExp2(0x071A2E, 0.018);
+
+  const camera = new THREE.PerspectiveCamera(42, w()/h(), 0.1, 800);
+  camera.position.set(0, 4, 22);
+  camera.lookAt(0, 2, 0);
+
+  // sky gradient sphere
+  const skyGeo = new THREE.SphereGeometry(300, 32, 32);
+  const skyMat = new THREE.ShaderMaterial({
+    side: THREE.BackSide,
+    uniforms: {
+      top: {value: new THREE.Color('#02060d')},
+      mid: {value: new THREE.Color('#071A2E')},
+      bot: {value: new THREE.Color('#D4AF37')},
+      gold:{value: new THREE.Color('#E8C766')}
+    },
+    vertexShader: `varying vec3 vP; void main(){ vP = position; gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0);}`,
+    fragmentShader: `varying vec3 vP; uniform vec3 top; uniform vec3 mid; uniform vec3 bot; uniform vec3 gold;
+      void main(){
+        float y = normalize(vP).y;
+        vec3 c;
+        if (y > 0.0){ c = mix(mid, top, smoothstep(0.0, 0.7, y)); }
+        else { float t = smoothstep(-0.5, 0.0, y); c = mix(bot, mid, t); c = mix(c, gold, smoothstep(-0.05, -0.0, y) * (1.0-smoothstep(-0.0,0.05,y)) * 0.6); }
+        gl_FragColor = vec4(c, 1.0);
+      }`
+  });
+  scene.add(new THREE.Mesh(skyGeo, skyMat));
+
+  // sun glow disc
+  const sunGeo = new THREE.CircleGeometry(8, 64);
+  const sunMat = new THREE.ShaderMaterial({
+    transparent:true,
+    uniforms:{ c:{value:new THREE.Color('#E8C766')}},
+    vertexShader:`varying vec2 vU; void main(){ vU = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0);}`,
+    fragmentShader:`varying vec2 vU; uniform vec3 c; void main(){ float d = distance(vU, vec2(0.5)); float a = smoothstep(0.5,0.05,d); gl_FragColor = vec4(c, a*0.85);}`
+  });
+  const sun = new THREE.Mesh(sunGeo, sunMat);
+  sun.position.set(-10, -0.5, -40);
+  scene.add(sun);
+
+  // runway plane
+  const runway = new THREE.Mesh(
+    new THREE.PlaneGeometry(60, 600, 1, 1),
+    new THREE.ShaderMaterial({
+      uniforms:{ time:{value:0}},
+      vertexShader:`varying vec2 vU; void main(){ vU = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0);}`,
+      fragmentShader:`varying vec2 vU; uniform float time;
+        void main(){
+          vec3 tarmac = vec3(0.02, 0.05, 0.09);
+          // center dashed line
+          float center = smoothstep(0.495, 0.5, vU.x) * (1.0-smoothstep(0.5,0.505,vU.x));
+          float dash = step(0.5, fract(vU.y * 30.0));
+          float centerLine = center * dash;
+          // edge lines
+          float edgeL = smoothstep(0.06,0.07,vU.x) * (1.0-smoothstep(0.07,0.08,vU.x));
+          float edgeR = smoothstep(0.92,0.93,vU.x) * (1.0-smoothstep(0.93,0.94,vU.x));
+          // distance fade
+          float fade = smoothstep(0.0, 0.3, vU.y);
+          vec3 col = tarmac;
+          col += vec3(0.8,0.7,0.3) * centerLine * fade;
+          col += vec3(0.7,0.6,0.3) * (edgeL+edgeR) * fade;
+          gl_FragColor = vec4(col, 1.0);
+        }`
+    })
+  );
+  runway.rotation.x = -Math.PI/2;
+  runway.position.set(0, -1.4, -200);
+  scene.add(runway);
+
+  // procedural aircraft (low-poly editorial silhouette)
+  const plane = new THREE.Group();
+  const matMetal = new THREE.MeshStandardMaterial({color:0xF4F1EA, metalness:0.7, roughness:0.35});
+  const matAccent = new THREE.MeshStandardMaterial({color:0xD4AF37, metalness:0.8, roughness:0.25});
+
+  // fuselage
+  const fuse = new THREE.Mesh(new THREE.CylinderGeometry(0.42, 0.42, 6, 24), matMetal);
+  fuse.rotation.z = Math.PI/2;
+  plane.add(fuse);
+  // nose
+  const nose = new THREE.Mesh(new THREE.ConeGeometry(0.42, 1.4, 24), matMetal);
+  nose.rotation.z = -Math.PI/2;
+  nose.position.x = 3.7;
+  plane.add(nose);
+  // tail cone
+  const tail = new THREE.Mesh(new THREE.ConeGeometry(0.42, 1.2, 24), matMetal);
+  tail.rotation.z = Math.PI/2;
+  tail.position.x = -3.6;
+  plane.add(tail);
+  // wings
+  const wingShape = new THREE.Shape();
+  wingShape.moveTo(0,0); wingShape.lineTo(0.6,-3.6); wingShape.lineTo(1.0,-3.6); wingShape.lineTo(1.4,0); wingShape.lineTo(0,0);
+  const wingGeo = new THREE.ExtrudeGeometry(wingShape, {depth:0.12, bevelEnabled:false});
+  const wingL = new THREE.Mesh(wingGeo, matMetal); wingL.position.set(0.4,0,0); plane.add(wingL);
+  const wingR = new THREE.Mesh(wingGeo, matMetal); wingR.position.set(0.4,0,0); wingR.scale.z = -1; plane.add(wingR);
+  // vertical stab
+  const vstabShape = new THREE.Shape();
+  vstabShape.moveTo(0,0); vstabShape.lineTo(0.9, 1.4); vstabShape.lineTo(1.3, 1.4); vstabShape.lineTo(1.6, 0);
+  const vstab = new THREE.Mesh(new THREE.ExtrudeGeometry(vstabShape, {depth:0.08, bevelEnabled:false}), matMetal);
+  vstab.position.set(-3.2, 0.3, -0.04);
+  plane.add(vstab);
+  // horizontal stab
+  const hstab = new THREE.Mesh(new THREE.BoxGeometry(1.2, 0.08, 2.6), matMetal);
+  hstab.position.set(-3.2, 0.4, 0);
+  plane.add(hstab);
+  // gold accent stripe along fuselage
+  const stripe = new THREE.Mesh(new THREE.CylinderGeometry(0.425, 0.425, 6, 24, 1, true, 0, Math.PI*0.2), matAccent);
+  stripe.rotation.z = Math.PI/2;
+  plane.add(stripe);
+  // engines
+  for (let i=-1;i<=1;i+=2){
+    const eng = new THREE.Mesh(new THREE.CylinderGeometry(0.22, 0.22, 0.9, 16), matAccent);
+    eng.rotation.z = Math.PI/2;
+    eng.position.set(0.55, -0.25, i*1.9);
+    plane.add(eng);
+  }
+  plane.scale.setScalar(0.85);
+  plane.position.set(0, -0.8, -8);
+  plane.rotation.y = -Math.PI/2;
+  scene.add(plane);
+
+  // particles - cloud puffs
+  const cloudGroup = new THREE.Group();
+  const cloudMat = new THREE.SpriteMaterial({color:0xF4F1EA, opacity:0.18, transparent:true, depthWrite:false});
+  for (let i=0;i<80;i++){
+    const s = new THREE.Sprite(cloudMat);
+    const r = 30 + Math.random()*120;
+    const a = Math.random()*Math.PI*2;
+    s.position.set(Math.cos(a)*r, 4 + Math.random()*30, Math.sin(a)*r - 30);
+    const sc = 6 + Math.random()*16;
+    s.scale.set(sc, sc*0.55, 1);
+    cloudGroup.add(s);
+  }
+  scene.add(cloudGroup);
+
+  // particles - dust
+  const dustGeo = new THREE.BufferGeometry();
+  const N = 600;
+  const positions = new Float32Array(N*3);
+  for (let i=0;i<N;i++){
+    positions[i*3]   = (Math.random()-0.5)*120;
+    positions[i*3+1] = Math.random()*40 - 2;
+    positions[i*3+2] = -Math.random()*220;
+  }
+  dustGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+  const dust = new THREE.Points(dustGeo, new THREE.PointsMaterial({color:0xD4AF37, size:0.06, transparent:true, opacity:0.7, depthWrite:false}));
+  scene.add(dust);
+
+  // lights
+  scene.add(new THREE.AmbientLight(0x88a4c2, 0.55));
+  const sunLight = new THREE.DirectionalLight(0xE8C766, 1.6);
+  sunLight.position.set(-10, 6, 8);
+  scene.add(sunLight);
+  const rim = new THREE.DirectionalLight(0x0EA5E9, 0.6);
+  rim.position.set(8, 4, -4);
+  scene.add(rim);
+
+  // engine glow sprites
+  const glowMat = new THREE.SpriteMaterial({color:0xE8C766, opacity:0, transparent:true, depthWrite:false});
+  const glowL = new THREE.Sprite(glowMat.clone()); glowL.scale.set(1.8,1.8,1); plane.add(glowL); glowL.position.set(-0.2,-0.25,1.9);
+  const glowR = new THREE.Sprite(glowMat.clone()); glowR.scale.set(1.8,1.8,1); plane.add(glowR); glowR.position.set(-0.2,-0.25,-1.9);
+
+  // STATE driven by scroll
+  const state = { progress: 0 };
+
+  function onResize(){
+    renderer.setSize(canvas.clientWidth, canvas.clientHeight, false);
+    camera.aspect = canvas.clientWidth/canvas.clientHeight;
+    camera.updateProjectionMatrix();
+  }
+  window.addEventListener('resize', onResize);
+  onResize();
+
+  // scroll storytelling driving hero progress
+  ScrollTrigger.create({
+    trigger: ".hero",
+    start: "top top",
+    end: "bottom top",
+    scrub: 0.6,
+    onUpdate: self => { state.progress = self.progress; }
+  });
+
+  // animate
+  const clock = new THREE.Clock();
+  function tick(){
+    const t = clock.getElapsedTime();
+    const p = state.progress;
+
+    // plane animation: taxi -> rotate -> climb -> fly off
+    // segments: 0-0.25 hold/taxi; 0.25-0.55 rotate+climb; 0.55-1 climb out
+    plane.position.x = 0 + p*0;
+    plane.position.y = -0.8 + Math.max(0, (p-0.22)*22);
+    plane.position.z = -8 - p*16;
+    const pitch = Math.min(0.45, Math.max(0, (p-0.2)*1.8));
+    plane.rotation.x = pitch;
+    plane.rotation.y = -Math.PI/2 + Math.sin(t*0.4)*0.02;
+    plane.rotation.z = Math.sin(t*0.6)*0.03 - p*0.1;
+
+    // engine glow ramps with throttle
+    const throttle = THREE.MathUtils.smoothstep(p, 0.05, 0.45);
+    glowL.material.opacity = throttle * (0.6 + Math.sin(t*40)*0.05);
+    glowR.material.opacity = throttle * (0.6 + Math.sin(t*40+1.5)*0.05);
+
+    // camera ease back as plane climbs
+    camera.position.y = 4 + p*3.5;
+    camera.position.z = 22 - p*3;
+    camera.lookAt(0, 2 + p*4, plane.position.z + 10);
+
+    // clouds drift
+    cloudGroup.rotation.y = t*0.01;
+    cloudGroup.position.y = -p*4;
+    // runway recedes
+    runway.position.z = -200 - p*60;
+    // dust drifting
+    const pos = dust.geometry.attributes.position.array;
+    for (let i=0;i<N;i++){
+      pos[i*3+2] += 0.15;
+      if (pos[i*3+2] > 22) pos[i*3+2] = -220;
+    }
+    dust.geometry.attributes.position.needsUpdate = true;
+
+    // HUD status
+    const statusEl = document.getElementById('hud-status');
+    if (statusEl){
+      if (p < 0.2) statusEl.textContent = 'READY FOR DEPARTURE';
+      else if (p < 0.45) statusEl.textContent = 'ROTATE · V2';
+      else if (p < 0.8) statusEl.textContent = 'POSITIVE RATE · GEAR UP';
+      else statusEl.textContent = 'CLIMB · FL080';
+    }
+
+    renderer.render(scene, camera);
+    requestAnimationFrame(tick);
+  }
+  tick();
+})();
+
+/* ============== GLOBE ============== */
+(function globeScene(){
+  const canvas = document.getElementById('globe-canvas');
+  if (!canvas) return;
+  const renderer = new THREE.WebGLRenderer({canvas, antialias:true, alpha:true});
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  const resize = ()=>renderer.setSize(canvas.clientWidth, canvas.clientHeight, false);
+  resize(); window.addEventListener('resize', resize);
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(40, 1, 0.1, 100);
+  camera.position.set(0, 0, 4.6);
+
+  // wireframe globe
+  const g = new THREE.Group();
+  scene.add(g);
+  const sphere = new THREE.Mesh(
+    new THREE.SphereGeometry(1.5, 40, 40),
+    new THREE.MeshBasicMaterial({color:0x0B2540, transparent:true, opacity:0.65})
+  );
+  g.add(sphere);
+  const wire = new THREE.LineSegments(
+    new THREE.EdgesGeometry(new THREE.SphereGeometry(1.51, 24, 18)),
+    new THREE.LineBasicMaterial({color:0xD4AF37, transparent:true, opacity:0.22})
+  );
+  g.add(wire);
+
+  // points = placement cities
+  const cities = [
+    [12.97, 77.59],  // Bengaluru
+    [25.27, 55.30],  // Dubai
+    [25.28, 51.52],  // Doha
+    [1.35, 103.82],  // Singapore
+    [24.45, 54.37],  // Abu Dhabi
+    [51.51, -0.12],  // London
+    [50.11, 8.68],   // Frankfurt
+    [40.71, -74.00], // NYC
+    [22.32, 114.17], // HK
+    [35.68, 139.69], // Tokyo
+    [-33.86, 151.20],// Sydney
+    [19.07, 72.87],  // Mumbai
+    [28.61, 77.20],  // Delhi
+    [-37.81, 144.96],// Melbourne
+    [55.75, 37.61],  // Moscow
+    [41.01, 28.97],  // Istanbul
+    [40.41, -3.70],  // Madrid
+    [37.77, -122.42],// SF
+    [-23.55, -46.63],// Sao Paulo
+    [-1.29, 36.82],  // Nairobi
+    [13.75, 100.50], // Bangkok
+    [3.14, 101.69],  // KL
+    [21.03, 105.85], // Hanoi
+    [33.69, 73.05],  // Islamabad
+    [23.81, 90.41],  // Dhaka
+    [6.93, 79.85],   // Colombo
+    [27.72, 85.32],  // KTM
+    [-26.20, 28.04], // Joburg
+  ];
+
+  function ll(lat, lon, r){
+    const phi = (90 - lat) * Math.PI/180;
+    const theta = (lon + 180) * Math.PI/180;
+    return new THREE.Vector3(
+      -r*Math.sin(phi)*Math.cos(theta),
+       r*Math.cos(phi),
+       r*Math.sin(phi)*Math.sin(theta)
+    );
+  }
+
+  const dots = new THREE.Group();
+  cities.forEach((c, i)=>{
+    const p = ll(c[0], c[1], 1.51);
+    const dot = new THREE.Mesh(new THREE.SphereGeometry(0.018, 10, 10),
+      new THREE.MeshBasicMaterial({color: i%4===0 ? 0xD4AF37 : 0x0EA5E9}));
+    dot.position.copy(p);
+    dots.add(dot);
+    // halo
+    const halo = new THREE.Mesh(new THREE.RingGeometry(0.025, 0.04, 16),
+      new THREE.MeshBasicMaterial({color:0xD4AF37, transparent:true, opacity:0.35, side:THREE.DoubleSide}));
+    halo.position.copy(p);
+    halo.lookAt(0,0,0);
+    halo.scale.setScalar(0.5);
+    halo.userData.t = Math.random()*Math.PI*2;
+    dots.add(halo);
+  });
+  g.add(dots);
+
+  // arcs from BLR to others
+  const blr = ll(12.97, 77.59, 1.51);
+  cities.slice(1, 14).forEach((c,i)=>{
+    const end = ll(c[0], c[1], 1.51);
+    const mid = blr.clone().add(end).multiplyScalar(0.5);
+    const dist = blr.distanceTo(end);
+    mid.normalize().multiplyScalar(1.51 + dist*0.4);
+    const curve = new THREE.QuadraticBezierCurve3(blr, mid, end);
+    const points = curve.getPoints(60);
+    const geo = new THREE.BufferGeometry().setFromPoints(points);
+    const line = new THREE.Line(geo, new THREE.LineBasicMaterial({color: 0xD4AF37, transparent:true, opacity:0.45}));
+    g.add(line);
+  });
+
+  let last = 0;
+  function tick(t){
+    const dt = (t-last)/1000; last = t;
+    g.rotation.y += dt*0.12;
+    g.rotation.x = Math.sin(t*0.0003)*0.1 - 0.2;
+    dots.children.forEach((c,i)=>{
+      if (c.userData.t !== undefined){
+        c.userData.t += dt*2;
+        c.scale.setScalar(0.5 + Math.sin(c.userData.t)*0.4 + 0.4);
+        c.material.opacity = 0.35 + Math.sin(c.userData.t)*0.25;
+      }
+    });
+    renderer.render(scene, camera);
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+})();
+
+/* ============== TEXT REVEALS ============== */
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if (e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target); }
+  });
+},{threshold:0.15});
+document.querySelectorAll('.reveal, .split-line').forEach(el=>io.observe(el));
+
+/* ============== JOURNEY PROGRESS ============== */
+const jTrack = document.getElementById('j-track');
+if (jTrack){
+  ScrollTrigger.create({
+    trigger: jTrack,
+    start: "top 70%",
+    end: "bottom 60%",
+    scrub: 0.4,
+    onUpdate: self => {
+      jTrack.style.setProperty('--prog', (self.progress*100)+'%');
+      const steps = jTrack.querySelectorAll('.j-step');
+      const total = steps.length;
+      const active = Math.min(total-1, Math.floor(self.progress * total));
+      steps.forEach((s,i)=>s.classList.toggle('on', i<=active));
+    }
+  });
+}
+
+/* ============== FAQ ============== */
+document.querySelectorAll('.faq-item').forEach(it=>{
+  it.addEventListener('click', ()=>{
+    const open = it.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(x=>x.classList.remove('open'));
+    if (!open) it.classList.add('open');
+  });
+});
+
+/* ============== MAGNETIC BUTTONS ============== */
+document.querySelectorAll('.btn-magnet').forEach(btn=>{
+  btn.addEventListener('mousemove', e=>{
+    const r = btn.getBoundingClientRect();
+    const x = e.clientX - r.left - r.width/2;
+    const y = e.clientY - r.top - r.height/2;
+    btn.style.transform = `translate(${x*0.18}px, ${y*0.3}px)`;
+  });
+  btn.addEventListener('mouseleave', ()=> btn.style.transform = '');
+});
+
+/* ============== FORM ID & SUBMIT ============== */
+document.getElementById('form-id').textContent = String(Math.floor(1000 + Math.random()*9000));
+function submitForm(e){
+  e.preventDefault();
+  const t = document.getElementById('toast');
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'), 4200);
+  e.target.reset();
+  document.getElementById('form-id').textContent = String(Math.floor(1000 + Math.random()*9000));
+  return false;
+}
+window.submitForm = submitForm;
+
+/* ============== SMOOTH SCROLL ============== */
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click', (e)=>{
+    const id = a.getAttribute('href').slice(1);
+    if (!id) return;
+    const t = document.getElementById(id);
+    if (t){ e.preventDefault(); window.scrollTo({top: t.offsetTop - 20, behavior:'smooth'}); }
+  });
+});
+</script>
+
+</body>
+</html>
